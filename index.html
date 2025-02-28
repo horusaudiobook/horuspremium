@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hórus Audiobook Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: gold;
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.8);
+        }
+
+        .video-card {
+            background: #181818;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .video-card img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .video-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .video-container {
+            display: none;
+            margin-top: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hórus Audiobook Premium</h1>
+
+          <!-- Botão de Pagamento PayPal -->
+          <a href="https://www.paypal.com/donate/?business=alessandro.p.silvaa@gmail.com&item_name=Support+Horus+Audiobook&currency_code=USD&amount=6
+          " target="_blank">
+            <button class="paypal-button">🔒 Access Premium Content - Pay with PayPal</button>
+        </a>
+        <!-- Miniatura do Vídeo -->
+        <div class="video-card" onclick="pedirSenha()">
+            <img src="https://img.youtube.com/vi/U3t5tZca33w/maxresdefault.jpg" alt="Miniatura do vídeo">
+            <h3>Outer Gateways - by Kenneth Grant | Audiobook 🎧</h3>
+            <p>Member Access - Click to watch.</p>
+        </div>
+
+        <!-- Player do YouTube -->
+        <div class="video-container" id="videoPlayer">
+            <iframe id="youtubeFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        Developed by Alessàndrho Peréira
+    </footer>
+
+    <script>
+        function pedirSenha() {
+            const senhaCorreta = "horus123";
+            let senhaDigitada = prompt("Enter the password to access this content:");
+
+            if (senhaDigitada === senhaCorreta) {
+                document.getElementById("videoPlayer").style.display = "block";
+                document.getElementById("youtubeFrame").src = "https://www.youtube.com/embed/U3t5tZca33w"; 
+            } else {
+                alert("Incorrect password! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
+
